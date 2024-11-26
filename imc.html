@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="calculo.html">Calculo</a>
+            <a href="cep.html">CEP</a>
+            <a href="imc.html">IMC</a>
+            <a href="index.html">Página principal</a>
+        </header>
+
+        <h1>IMC</h1>
+        <label>Peso</label>
+        <input id="num1" type="number">
+        <label>Altura</label>
+        <input id="num2" type="number">
+        <button onclick="imc()">IMC</button>
+        <h3 Id="resultado"></h3>
+
+        <script>
+            function imc(){
+             var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var resultado = num1/ (num2*num2)
+
+            document.getElementById("resultado").innerHTML = resultado
+            }
+        </script>
+    </body>
+</html>

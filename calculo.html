@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="calculo.html">Calculo</a>
+            <a href="cep.html">CEP</a>
+            <a href="imc.html">IMC</a>
+            <a href="index.html">Página principal</a>
+        </header>
+       
+        <h1>Calculo de OHMs</h1>
+        <label>Tensão(u)</label>
+        <input id="tensao" type="number">
+        <label>Resistores(r)</label>
+        <input id="resistores" type="number">
+        <label>Corrente(i)</label>
+        <input id="corrente" type="number">
+        <button onclick="ohms()">OHMs</button>
+        <h3 id="resultado"></h3>
+
+        <script>
+            function ohms(){
+             var tensao = parseFloat(document.getElementById("tensao").value);
+            var resistores = parseFloat(document.getElementById("resistores").value);
+            var corrente = parseFloat(document.getElementById("corrente").value);
+
+            if(isNaN(tensao)){
+                resultado = resistores*corrente
+            }
+
+            if(isNaN(resistores)){
+                resultado = tensao/corrente
+            }
+
+            if(isNaN(corrente)){
+                resultado = tensao/resistores
+            }
+
+            document.getElementById("resultado").innerHTML = resultado
+            }
+        </script>
+    </body>
+</html>
