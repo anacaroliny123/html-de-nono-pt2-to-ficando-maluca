@@ -52,6 +52,7 @@
                                 // Preencher os campos de estado e bairro
                                 document.getElementById("estado").value = data.uf;
                                 document.getElementById("bairro").value = data.bairro;
+                                document.getElementById("resultado").innerHTML = " ";
                             }
                         })
                         .catch(error => {
